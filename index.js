@@ -1,6 +1,17 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+
+  function hasTargetSum(array, target) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      for (let j=i+1; j < array.length; j++) {
+        sum = array[i] + array[j];
+        if (sum === target) {
+          return true;
+        }
+      }
+    }return false;
+  }
+  
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -11,7 +22,7 @@ function hasTargetSum(array, target) {
 */
 
 /*
-  Add written explanation of your solution here
+I created two for loops .If their sum is equal with sum the return value will be true,if not it will be false
 */
 
 // You can run `node index.js` to view these console logs
